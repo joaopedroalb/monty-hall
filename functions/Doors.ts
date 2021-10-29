@@ -10,3 +10,15 @@ export function createDoors(qtd:number, selected:number):DoorModel[]{
 
     return doors
 }
+
+export function refreshDoors(doors:DoorModel[],doorChanged:DoorModel):DoorModel[]{
+    return doors.map(currentDoor=>{
+        const sameDoor = currentDoor.doorNumber===doorChanged.doorNumber
+
+        if(sameDoor)
+            return doorChanged;
+        else
+            return doorChanged.doorOpen? currentDoor:currentDoor.markOff();
+        
+    })
+}
