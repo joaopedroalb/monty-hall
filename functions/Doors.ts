@@ -1,10 +1,10 @@
 import { doesNotReject } from "assert";
 import DoorModel from "../model/DoorModel";
 
-export function createDoors(qtd:number, selected:number):DoorModel[]{
+export function createDoors(qtd:number, doorWithReward:number):DoorModel[]{
     const doors:Array<DoorModel> = Array.from({length:qtd},(_,i)=>{
         const num = i+1
-        const hasReward = num === selected
+        const hasReward = num === doorWithReward
         return new DoorModel(num,hasReward,false,false)
     })
 
