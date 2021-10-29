@@ -1,4 +1,5 @@
 import DoorModel from '../../model/DoorModel'
+import Reward from '../Reward'
 import styles from './index.module.css'
 
 interface DoorProps{
@@ -27,10 +28,22 @@ export default function Door(props: DoorProps){
         )
     }
 
+    function renderReward(){
+        if(door.doorHasReward){
+            return (
+                <div className={styles.rewardContainer}>
+                    <Reward/>
+                </div>
+            )
+        }
+            return false;
+        
+    }
+
     return(
         <div className={styles.areaDoor}>
             <div className={!selecionedCss? styles.frameDoor : styles.frameDoorSelected} onClick={switchSelection}>
-            {door.doorOpen ? false: renderDoorOpen()}
+            {door.doorOpen ? renderReward(): renderDoorOpen()}
             </div>
             <div className={styles.floorDoor}>
             </div>

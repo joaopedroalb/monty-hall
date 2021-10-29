@@ -54,6 +54,13 @@
     background-color: #ddd;
 }
 
+.rewardContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
 
 /*Quando a porta é selecionada*/
 

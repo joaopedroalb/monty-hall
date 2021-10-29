@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 
-  const [doors,setDoors] = useState(createDoors(5,2))
+  const [doors,setDoors] = useState(createDoors(5,4))
 
   function renderDoors(){
     return doors.map((e:DoorModel)=>{
