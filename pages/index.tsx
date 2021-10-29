@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
 
-  const [d1,setD1] = useState(new DoorModel(13,true,false,true))
+  const [d1,setD1] = useState(new DoorModel(13,false,false,false))
 
   return (
     <div className={styles.container}>
