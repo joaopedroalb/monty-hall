@@ -9,15 +9,16 @@
     height: var(--area--door-height);
 }
 
-.frameDoor{
+.frameDoor,.frameDoorSelected{
     display: flex;
     flex: 1;
+    width: 90%;
+}
 
+.frameDoor{
     border-left: 5px solid brown;
     border-top: 5px solid brown;
     border-right: 5px solid brown;
-
-    width: 90%;
 }
 
 .containerDoor{
