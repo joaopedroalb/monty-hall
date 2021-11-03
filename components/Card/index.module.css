@@ -1,0 +1,9 @@
+.cardBg{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    font-size: 2rem;
+    margin: 3px;
+    align-items: center;
+    justify-content: center;
+}
