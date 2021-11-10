@@ -6,10 +6,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 4px;
+
+    background: rgb(133,9,149);
+    background: linear-gradient(360deg, rgba(133,9,149,1) 0%, rgba(120,32,155,1) 27%, rgba(64,37,108,1) 100%);
 }
 
-.container > div{
+.cardContainerUpper,.cardContainerBottom{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap; 
 }
 
 .link{

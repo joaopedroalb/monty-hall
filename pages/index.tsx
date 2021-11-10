@@ -13,8 +13,8 @@ const Home: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <Card bgColor="#c0392c">
+      <div className={styles.cardContainerUpper}>
+        <Card bgColor="#4b4bb4">
           <h1>Monty Hall</h1>
         </Card>
         <Card>
@@ -24,14 +24,14 @@ const Home: NextPage = () => {
         </Card>
       </div>
 
-      <div>
+      <div className={styles.cardContainerBottom}>
         <Card>
           <DoorsCount text="Porta Premiada" 
                       value={prizedDoor} 
                       doorsCount={doorsCount}
                       onChange={newPrizedDoor => setPrizedDoor(newPrizedDoor)} />
         </Card>
-        <Card bgColor="#28a085">
+        <Card bgColor="#4b9ab4">
           <Link href={`/Game/${doorsCount}/${prizedDoor}`}>
             <h2 className={styles.link}>Iniciar</h2>
           </Link>
