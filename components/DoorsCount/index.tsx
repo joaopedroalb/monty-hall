@@ -1,6 +1,7 @@
 import styles from "./index.module.css"
 
 interface DoorsCountProps{
+    type:"select"|'qtde'
     doorsCount?:number
     text:string
     value:number
@@ -22,13 +23,19 @@ export default function DoorsCount(props:DoorsCountProps){
         }
     }
 
+    const btnTxt = (onClickStr:'dec'|'inc') =>{
+        if(onClickStr=='dec')
+            return props.type=='qtde' ? '-':'<'
+        return props.type=='qtde' ? '+':'>'
+    }
+
     return(
         <div className={styles.container}>
             <span className={styles.text}>{props.text}</span>
             <span className={styles.value}>{props.value}</span>
             <div className={styles.btnContainer}>
-                <button className={styles.btn} onClick={dec}>-</button>
-                <button className={styles.btn} onClick={inc}>+</button>
+                <button className={styles.btn} onClick={dec}>{btnTxt('dec')}</button>
+                <button className={styles.btn} onClick={inc}>{btnTxt('inc')}</button>
             </div>
         </div>
     )

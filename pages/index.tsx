@@ -20,7 +20,9 @@ const Home: NextPage = () => {
         <Card>
           <DoorsCount text="Qtde Portas" 
                       value={doorsCount} 
-                      onChange={newCount => setDoorsCount(newCount)} />
+                      onChange={newCount => setDoorsCount(newCount)} 
+                      type ={'qtde'}
+                      />
         </Card>
       </div>
 
@@ -29,7 +31,9 @@ const Home: NextPage = () => {
           <DoorsCount text="Porta Premiada" 
                       value={prizedDoor} 
                       doorsCount={doorsCount}
-                      onChange={newPrizedDoor => setPrizedDoor(newPrizedDoor)} />
+                      onChange={newPrizedDoor => setPrizedDoor(newPrizedDoor)} 
+                      type="select"
+                      />
         </Card>
         <Card bgColor="#4b9ab4">
           <Link href={`/Game/${doorsCount}/${prizedDoor}`}>
